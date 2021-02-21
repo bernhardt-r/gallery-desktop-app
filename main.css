@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Reggae One', cursive;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(108,108,108);
+  background: linear-gradient(90deg, rgba(108,108,108,1) 0%, rgba(217,217,217,1) 50%, rgba(108,108,108,1) 100%);
+}
+
+.container_bigpic {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-self: center;
+  position: relative;
+  padding-top: 100px;
+}
+
+.container_bigpic .gallery_img_big {
+  width: 800px;
+}
+
+.prev, .next {
+  background-color: #eee;
+  padding: 20px;
+  width: 60px;
+  display: flex;
+}
+
+.next img {
+  transform: rotate(0.5turn);
+}
+
+.container_text {
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ddd;
+  padding: 15px;
+}
+
+.container_thumb {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.thumb {
+  width: 100px;
+  margin: 0 5px;
+  position: relative;
+}
+
+.thumb_img {
+  width: 100%;
+  border: 3px solid #fff;
+  border-radius: 3px;
+}
+
+.active_thumb {
+  box-shadow: 0px 27px 20px -15px #000000;
+  position: relative;
+}
+
+.thumb_title {
+  display: none;
+  position: absolute;
+  background: #e15915;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  top: -35px;
+  height: 25px;
+  font-size: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+.thumb_title::after {
+  content:'';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  height: 0;
+  border-top: solid 5px #e15915;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+}
+
+.thumb:hover .thumb_title {
+  display: block;
+}
